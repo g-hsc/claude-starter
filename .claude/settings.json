@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "fileSystem": "full",
+    "runCommands": true,
+    "network": true,
+    "git": true
+  },
+  "autonomy": {
+    "autoApproveSafeChanges": true,
+    "requireApprovalFor": [
+      "database_migration",
+      "production_deploy",
+      "schema_change_destructive",
+      "secrets_access"
+    ]
+  },
+  "behavior": {
+    "autoFixLint": true,
+    "autoRunTests": true,
+    "autoFormat": true,
+    "scaffoldProjects": true,
+    "endToEndExecution": true
+  },
+  "guardrails": {
+    "noForcePushMain": true,
+    "noDirectMainCommits": true,
+    "protectEnvFiles": true,
+    "protectDatabase": true
+  }
+}
